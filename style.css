@@ -1,23 +1,26 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #ff4e8a, #ff9ecb);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Loading */
+#loading {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-align: center;
 }
 
-.container {
-  animation: fadeIn 2s ease-in-out;
+/* Hide main first */
+.hidden {
+  display: none;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
+/* Buttons */
 .buttons button {
   margin: 10px;
   padding: 12px 20px;
@@ -34,6 +37,19 @@ h1 {
   transform: scale(1.1);
 }
 
+/* Gallery */
+.gallery img {
+  width: 120px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.2);
+}
+
+/* Popup */
 .popup {
   position: fixed;
   bottom: 20px;
@@ -46,7 +62,56 @@ h1 {
   display: none;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+/* Flip Card */
+.card {
+  width: 200px;
+  height: 120px;
+  perspective: 1000px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: #ff4e8a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: 0.6s;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flip .front {
+  transform: rotateY(180deg);
+}
+
+.flip .back {
+  transform: rotateY(360deg);
+}
+
+/* Password */
+.passwordBox {
+  margin-top: 20px;
+}
+
+/* Heart rain */
+.heart {
+  position: fixed;
+  top: -10px;
+  font-size: 24px;
+  animation: fall 5s linear;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
 }
