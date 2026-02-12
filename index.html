@@ -7,43 +7,33 @@
 </head>
 <body>
 
-<!-- Loading Screen -->
+<!-- Loading -->
 <div id="loading">
-  <h1>Loading Something Special for You Papu… 💖</h1>
+  <h1>Hi kedi unaku oru small Surprise Papu… 💖</h1>
 </div>
 
-<!-- Main App -->
+<!-- Main -->
 <div id="app" class="hidden">
 
-  <h1>💖 I Love You Papu 💖</h1>
+  <h1 class="glow">💖 I Love You Sooooo much Papu 💖</h1>
   <h2 id="typeText"></h2>
+
+  <!-- Gift Box -->
+  <div class="gift" onclick="openGift()">🎁</div>
+  <p>Tap the Gift Papu 💝</p>
+
+  <!-- Love Meter -->
+  <h2>Love Meter ❤️</h2>
+  <div class="meter">
+    <div id="fill"></div>
+  </div>
+  <button onclick="fillLove()">Fill My Love 💘</button>
 
   <!-- Buttons -->
   <div class="buttons">
     <button onclick="showLoveLetter()">💌 Love Letter</button>
-    <button onclick="showReasons()">❤️ Reasons I Love You</button>
     <button onclick="startGame()">🎮 Catch My Love</button>
     <button onclick="proposal()">💍 Final Surprise</button>
-  </div>
-
-  <!-- Photo Gallery -->
-  <h2>Our Memories 📸</h2>
-  <div class="gallery">
-    <img src="https://picsum.photos/200?1">
-    <img src="https://picsum.photos/200?2">
-    <img src="https://picsum.photos/200?3">
-  </div>
-
-  <!-- Flip Card -->
-  <div class="card" onclick="this.classList.toggle('flip')">
-    <div class="front">Tap Me ❤️</div>
-    <div class="back">Your smile makes my world brighter 🌍</div>
-  </div>
-
-  <!-- Password -->
-  <div class="passwordBox">
-    <input type="password" id="pass" placeholder="Secret Code">
-    <button onclick="checkPass()">Unlock 🔐</button>
   </div>
 
 </div>
